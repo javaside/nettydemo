@@ -10,6 +10,7 @@ public class WeakReferenceWithQueue {
 
         WeakReference<Object> weakRef = new WeakReference<>(obj, queue);
         System.out.println(weakRef.get());
+        System.out.println(weakRef);
 
         // 移除强引用
         obj = null;
@@ -23,7 +24,7 @@ public class WeakReferenceWithQueue {
                     break;
                 }
 
-                System.out.println(weakRef.get());
+                System.out.println(weakRef);
             }
         } catch (Exception e) {
             e.printStackTrace();
